@@ -1,0 +1,343 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restraunt</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <style>
+        /* Стили для футера */
+        .footer {
+            background-color: #f8f8f8;
+            padding: 20px;
+            text-align: center;
+            border-top: 2px solid #e0e0e0;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-logo {
+            flex: 1;
+            text-align: left;
+        }
+
+        .footer-logo img {
+            max-height: 50px;
+        }
+
+        .footer-navigation {
+            flex: 2;
+            text-align: center;
+        }
+
+        .footer-navigation a {
+            margin: 0 15px;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .footer-social {
+            flex: 1;
+            text-align: right;
+        }
+
+        .footer-social a {
+            margin-left: 10px;
+        }
+
+        .footer-social img {
+            max-height: 25px;
+        }
+
+        .footer-copyright {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-container container">
+            <input type="checkbox" name="" id="">
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+            <ul class="menu-items">
+                <li><a href="#home">Домой</a></li>
+                <li><a href="#about">О нас</a></li>
+                <li><a href="#food">Категории</a></li>
+                <li><a href="#food-menu">Меню</a></li>
+                <li><a href="#testimonials">Отзывы</a></li>
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
+            <h1 class="logo">Restaurant Egora</h1>
+        </div>
+    </nav>
+    <section class="showcase-area" id="showcase">
+        <div class="showcase-container">
+            <h1 class="main-title" id="home">Питайтесь здоровой пищей!</h1>
+            <p>Кушайте много, кушайте вкусно!</p>
+            <a href="#food-menu" class="btn btn-primary">Меню</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="about-wrapper container">
+            <div class="about-text">
+                <p class="small">О нас</p>
+                <h2>Мы обеспечиваем здоровое питание на протяжении 10 лет</h2>
+                <p>
+                    Добро пожаловать в наш ресторан! Мы гордимся тем, что уже 10 лет радуем наших гостей вкусной едой и уютной атмосферой. За эти годы мы стали местом, куда приходят за незабываемыми впечатлениями, семейными ужинами, романтическими вечерами и дружескими встречами.
+                </p>
+            </div>
+            <div class="about-img">
+                <img src="https://i.postimg.cc/mgpwzmx9/about-photo.jpg" alt="food" />
+            </div>
+        </div>
+    </section>
+    <section id="food">
+        <h2>Виды еды</h2>
+        <div class="food-container container">
+            <div class="food-type fruite">
+                <div class="img-container">
+                    <img src="https://i.postimg.cc/yxThVPXk/food1.jpg" alt="error" />
+                    <div class="img-content">
+                        <h3>Фрукты</h3>
+                        <a href="https://en.wikipedia.org/wiki/Fruit" class="btn btn-primary" target="blank">узнать
+                            больше</a>
+                    </div>
+                </div>
+            </div>
+            <div class="food-type vegetable">
+                <div class="img-container">
+                    <img src="https://i.postimg.cc/Nffm6Rkk/food2.jpg" alt="error" />
+                    <div class="img-content">
+                        <h3>Вегетаранские</h3>
+                        <a href="https://en.wikipedia.org/wiki/Vegetable" class="btn btn-primary"
+                            target="blank">узнать больше</a>
+                    </div>
+                </div>
+            </div>
+            <div class="food-type grin">
+                <div class="img-container">
+                    <img src="https://i.postimg.cc/76ZwsPsd/food3.jpg" alt="error" />
+                    <div class="img-content">
+                        <h3>Зерна</h3>
+                        <a href="https://en.wikipedia.org/wiki/Grain" class="btn btn-primary" target="blank">узнать
+                            больше</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="food-menu">
+        <h2 class="food-menu-heading">Наши лучшие блюда</h2>
+        <div class="food-menu-container container">
+            <div class="food-menu-item">
+                <div class="food-img">
+                    <img src="https://i.postimg.cc/wTLMsvSQ/food-menu1.jpg" alt="" />
+                </div>
+                <div class="food-description">
+                    <h2 class="food-titile">Салат "Греческая симфония"</h2>
+                    <p>
+                        Классический микс свежих овощей с нежным сыром фета, оливками и ароматной заправкой. Идеальный выбор для любителей
+                        средиземноморской кухни.
+                    </p>
+                    <p class="food-price">Цена: 800р</p>
+                </div>
+            </div>...
+            <div class="food-menu-item">
+                <div class="food-img">
+                    <img src="https://i.postimg.cc/sgzXPzzd/food-menu2.jpg" alt="error" />
+                </div>
+                <div class="food-description">
+                    <h2 class="food-titile">Овсянка "Золотое утро"</h2>
+                    <p>
+                        Нежная овсяная каша с орехами, сухофруктами и медом. Легкий и полезный завтрак для бодрого начала дня.
+                    </p>
+                    <p class="food-price">Цена: 350р </p>
+                </div>
+            </div>
+            <div class="food-menu-item">
+                <div class="food-img">
+                    <img src="https://i.postimg.cc/8zbCtYkF/food-menu3.jpg" alt="" />
+                </div>
+                <div class="food-description">
+                    <h2 class="food-titile">Салат "Зеленая энергия"</h2>
+                    <p>
+                        Хрустящий микс брокколи, авокадо и шпината с легким лимонным соусом. Полезно, вкусно и питательно!
+                    </p>
+                    <p class="food-price">Цена: 300р </p>
+                </div>
+            </div>
+            <div class="food-menu-item">
+                <div class="food-img">
+                    <img src="https://i.postimg.cc/Yq98p5Z7/food-menu4.jpg" alt="" />
+                </div>
+                <div class="food-description">
+                    <h2 class="food-titile">Боул "Цветочная радуга"</h2>
+                    <p>
+                        Красочный боул с киноа, свежими овощами и пикантным соусом. Заряд витаминов в каждой ложке!
+                    </p>
+                    <p class="food-price">Цена: 500р </p>
+                </div>
+            </div>
+            <div class="food-menu-item">
+                <div class="food-img">
+                    <img src="https://i.postimg.cc/KYnDqxkP/food-menu5.jpg" alt="" />
+                </div>
+                <div class="food-description">
+                    <h2 class="food-titile">Ассорти "Фруктовый восторг"</h2>
+                    <p>
+                        Сочный набор сезонных фруктов с йогуртовым соусом и орехами. Идеальный десерт для любителей здорового питания.
+                    </p>
+                    <p class="food-price">Цена: 500р </p>
+                </div>
+            </div>
+            <div class="food-menu-item">
+                <div class="food-img">
+                    <img src="https://i.postimg.cc/Jnxc8xQt/food-menu6.jpg" alt="" />
+                </div>
+                <div class="food-description">
+                    <h2 class="food-titile">Салат "Витаминный взрыв"</h2>
+                    <p>
+                        Легкий салат из свежих овощей, ягод и орехов с медово-горчичной заправкой. Настоящий праздник вкуса!
+                    </p>
+                    <p class="food-price">Цена: 450р </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="testimonials">
+        <h2 class="testimonial-title">Что говорят наши клиенты</h2>
+        <div class="testimonial-container container">
+            <div class="testimonial-box">
+                <div class="customer-detail">
+                    <div class="customer-photo">
+                        <img src="https://i.postimg.cc/5Nrw360Y/male-photo1.jpg" alt="" />
+                        <p class="customer-name">Алехандро Маловицкий</p>
+                    </div>
+                </div>
+                <div class="star-rating">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                </div>
+                <p class="testimonial-text">
+                    "Каждое блюдо – это произведение искусства! Салат 'Греческая симфония' был свежим и хрустящим, а овсянка 'Золотое утро'
+                    буквально таяла во рту. Атмосфера уютная, персонал внимательный. Обязательно вернусь снова, чтобы попробовать что-то
+                    новое!"
+                </p>
+
+            </div>
+            <div class="testimonial-box">
+                <div class="customer-detail">
+                    <div class="customer-photo">
+                        <img src="https://i.postimg.cc/sxd2xCD2/female-photo1.jpg" alt="" />
+                        <p class="customer-name">Ангелина Прирудская</p>
+                    </div>
+                </div>
+                <div class="star-rating">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                </div>
+                <p class="testimonial-text">
+                    "Мы пришли всей семьей, и каждый нашел что-то по вкусу. Дети были в восторге от ассорти 'Фруктовый восторг', а я не могла
+                    оторваться от салата 'Витаминный взрыв'. Персонал был невероятно дружелюбным и даже предложил нам дополнительные соусы.
+                    Спасибо за отличный вечер!"
+                </p>
+
+            </div>
+            <div class="testimonial-box">
+                <div class="customer-detail">
+                    <div class="customer-photo">
+                        <img src="https://i.postimg.cc/fy90qvkV/male-photo3.jpg" alt="" />
+                        <p class="customer-name">Дмитрио Авиторсон</p>
+                    </div>
+                </div>
+                <div class="star-rating">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                </div>
+                <p class="testimonial-text">
+                    "Не только вкусно, но и невероятно красиво! Подача блюд заслуживает отдельной похвалы – боулы выглядят как картины.
+                    Особенно понравился киноа с овощами – легкий и питательный обед. Атмосфера спокойная, идеально подходит для встреч с
+                    друзьями."
+                </p>
+
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="contact-container container">
+            <div class="contact-img">
+                <img src="https://i.postimg.cc/1XvYM67V/restraunt2.jpg" alt="" />
+            </div>
+
+            <div class="form-container">
+                <h2>Контактная информация</h2>
+                <input type="text" placeholder="Ваше имя" />
+                <input type="email" placeholder="Ваш E-Mail" />
+                <textarea cols="30" rows="6" placeholder="Оставьте ваше сообщение"></textarea>
+                <a href="#" class="btn btn-primary">Отправить</a>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="https://i.postimg.cc/Z5KgqK9n/logo-restaurant.png" alt="Restaurant Logo">
+            </div>
+
+            <div class="footer-navigation">
+                <a href="#menu">Меню</a>
+                <a href="#about">О нас</a>
+                <a href="#contact">Контакты</a>
+            </div>
+
+            <div class="footer-social">
+                <a href="#"><img src="https://i.postimg.cc/PxF02jZT/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="https://i.postimg.cc/RDjD5jzQ/instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="https://i.postimg.cc/jqWBryWB/twitter.png" alt="Twitter"></a>
+            </div>
+        </div>
+
+        <div class="footer-contact">
+            <p>Телефон: +7 (999) 123-45-67</p>
+            <p>Email: info@restaurantegora.com</p>
+            <p>Адрес: Москва, ул. Примерная, д. 10</p>
+        </div>
+
+        <p class="footer-copyright">© 2025 Restaurant Egora. Все права защищены.</p>
+    </footer>
+    <!-- .................../ JS Code for smooth scrolling /...................... -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+
+</body>
+
+</html>
