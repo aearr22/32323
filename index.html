@@ -78,13 +78,91 @@
                 <span class="line line3"></span>
             </div>
             <ul class="menu-items">
-                <li><a href="#home">Домой</a></li>
-                <li><a href="#about">О нас</a></li>
-                <li><a href="#food">Категории</a></li>
-                <li><a href="#food-menu">Меню</a></li>
-                <li><a href="#testimonials">Отзывы</a></li>
-                <li><a href="#contact">Контакты</a></li>
-            </ul>
+    <li><a href="#home">Домой</a></li>
+    <li><a href="#about">О нас</a></li>
+    <li><a href="#food">Категории</a></li>
+    <li><a href="#food-menu">Меню</a></li>
+    <li><a href="#testimonials">Отзывы</a></li>
+    <li><a href="#contact">Контакты</a></li>
+    <li>
+        <button id="openBooking" style="padding: 8px 16px; background: #ff9800; color: #fff; border: none; border-radius: 4px; cursor: pointer;">
+            Забронировать
+        </button>
+    </li>
+</ul>
+
+<!-- Модальное окно бронирования -->
+<div id="bookingModal" style="display:none; position:fixed; z-index:1000; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,1.5);">
+    <div style="background:#fff; max-width:400px; margin:5% auto; padding:24px 20px 20px 20px; border-radius:8px; position:relative;">
+        <button id="closeBooking" style="position:absolute; top:10px; right:15px; background:none; border:none; font-size:22px; cursor:pointer;">&times;</button>
+        <h2 style="margin-top:0;">Бронирование</h2>
+        <form id="bookingForm">
+            <div style="margin-bottom:10px;">
+                <input type="text" name="firstName" placeholder="Имя" required style="width:100%;padding:8px;">
+            </div>
+            <div style="margin-bottom:10px;">
+                <input type="text" name="lastName" placeholder="Фамилия" required style="width:100%;padding:8px;">
+            </div>
+            <div style="margin-bottom:10px;">
+                <input type="tel" name="phone" placeholder="Телефон" required pattern="[+0-9\s\-()]{10,20}" style="width:100%;padding:8px;">
+            </div>
+            <div style="margin-bottom:10px;">
+                <input type="date" name="date" required style="width:100%;padding:8px;">
+            </div>
+            <div style="margin-bottom:10px;">
+                <input type="time" name="time" required style="width:100%;padding:8px;">
+            </div>
+            <div style="margin-bottom:10px;">
+                <select name="zone" required style="width:100%;padding:8px;">
+                    <option value="" disabled selected>Выберите зал</option>
+                    <option value="smoking">Для курящих</option>
+                    <option value="non-smoking">Для некурящих</option>
+                    <option value="outdoor">Улица</option>
+                </select>
+            </div>
+            <div style="margin-bottom:10px;">
+                <select name="dish" required style="width:100%;padding:8px;">
+                    <option value="" disabled selected>Выберите блюдо</option>
+                    <option value="steak">Стейк</option>
+                    <option value="salad">Салат</option>
+                    <option value="soup">Суп</option>
+                    <option value="pizza">Пицца</option>
+                    <option value="other">Другое</option>
+                </select>
+            </div>
+            <button type="submit" style="width:100%;padding:10px;background:#ff9800;color:#fff;border:none;border-radius:4px;font-size:16px;cursor:pointer;">
+                Оформить заказ
+            </button>
+        </form>
+        <div id="bookingSuccess" style="display:none; margin-top:20px; color:green; font-weight:bold; text-align:center;">
+            Заказ оформлен!
+        </div>
+    </div>
+</div>
+
+<script>
+document.getElementById('openBooking').onclick = function() {
+    document.getElementById('bookingModal').style.display = 'block';
+    document.getElementById('bookingSuccess').style.display = 'none';
+    document.getElementById('bookingForm').style.display = 'block';
+};
+document.getElementById('closeBooking').onclick = function() {
+    document.getElementById('bookingModal').style.display = 'none';
+};
+document.getElementById('bookingForm').onsubmit = function(e) {
+    e.preventDefault();
+    // Здесь можно добавить отправку данных на сервер
+    this.style.display = 'none';
+    document.getElementById('bookingSuccess').style.display = 'block';
+    setTimeout(() => {
+        document.getElementById('bookingModal').style.display = 'none';
+        document.getElementById('bookingForm').reset();
+        document.getElementById('bookingForm').style.display = 'block';
+        document.getElementById('bookingSuccess').style.display = 'none';
+    }, 2000);
+};
+</script>
+
             <h1 class="logo">Restaurant Egora</h1>
         </div>
     </nav>
@@ -326,9 +404,9 @@
         </div>
 
         <div class="footer-contact">
-            <p>Телефон: +7 (999) 123-45-67</p>
+            <p>Телефон: +7 (902) 105-61-86</p>
             <p>Email: info@restaurantegora.com</p>
-            <p>Адрес: Москва, ул. Примерная, д. 10</p>
+            <p>Адрес: Йошкар-Ола, бульвар Чавайна, д.23А</p>
         </div>
 
         <p class="footer-copyright">© 2025 Restaurant Egora. Все права защищены.</p>
